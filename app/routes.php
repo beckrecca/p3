@@ -15,3 +15,25 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/filler', function()
+{
+	return View::make('test');
+});
+
+Route::post('/filler', function() 
+{
+	$input = Input::all();
+	return Pre::r($input, 'test stuff');
+});
+
+Route::get('/user', function()
+{
+	return View::make('test');
+});
+
+Route::post('/user', function() 
+{
+	$input = Input::all();
+	return Pre::r($input, 'some more test stuff');
+});
