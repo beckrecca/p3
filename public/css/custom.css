@@ -4,11 +4,12 @@ body {
 h1 {
     color: #fff;
     background-color: #F19181;
-    padding: .25em .25em .5em .5em;
+    padding: .25em .25em .25em .25em;
     margin-top: 0px;
     -webkit-border-radius: 0em 0em .25em .25em;
     -moz-border-radius: 0em 0em .25em .25em;
     border-radius: 0em 0em .25em .25em;
+    font-family: 'Crafty Girls', cursive;
 }
 h3 {
     padding-top: 0px;
