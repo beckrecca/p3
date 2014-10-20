@@ -99,12 +99,12 @@ Class CuteUser {
   private function randomDayOfTheMonth($month) {
     $day;
     if ($month == 2) {
-       $day = rand(0,28);
+       $day = rand(1,28);
     }
     else if ($month == 9 || $month == 4 || $month == 6 || $month == 11) {
-      $day = rand(0,30);
+      $day = rand(1,30);
     }
-    else $day = rand(0,31);
+    else $day = rand(1,31);
     return $day;
   }
 
