@@ -5,23 +5,25 @@ Class CuteUser {
   private $name; // String of the user's name
   private $dob; // String of the user's date of birth
   private $loc; // String of the user's location
+  private $img; // String of the user's avatar image URI
 
   /** Methods **/
 
   /**
-  * Sets up the new user with a name, DOB, and location.
+  * Sets up the new user with a random name, DOB, location, and avatar image URI.
   **/
   public function setUser() {
-    $this->setName();
-    $this->setDOB();
-    $this->setLoc();
+    $this->name = $this->randomName();
+    $this->dob = $this->randomDOB();
+    $this->loc = $this->RandomLocation();
+    $this->img = "/img/" . rand(1,24) . ".png";
   }
   
   /**
-  * Sets the user's name.
+  * Sets the user's name manually.
   **/
-  public function setName() {
-    $this->name = $this->randomName();
+  public function setName($name) {
+    $this->name = $name;
   }
 
   /**
@@ -32,10 +34,10 @@ Class CuteUser {
   }
 
   /**
-  * Sets the user's date of birth.
+  * Sets the user's date of birth manually.
   **/
-  public function setDOB() {
-    $this->dob = $this->randomDOB();
+  public function setDOB($month, $day, $year) {
+    $this->dob = $month . "/" . $day . "/" . $year;
   }
 
   /**
@@ -46,10 +48,10 @@ Class CuteUser {
   }
 
   /**
-  * Sets the user's location.
+  * Sets the user's location manually.
   **/
-  public function setLoc() {
-    $this->loc = $this->RandomLocation();
+  public function setLoc($loc) {
+    $this->loc = $loc;
   }
 
   /**
@@ -57,6 +59,20 @@ Class CuteUser {
   **/
   public function getLoc() {
     return $this->loc;
+  }
+    
+  /**
+  * Sets the user's avatar image path manually.
+  **/
+  public function setImg($URI) {
+    $this->img = $URI;
+  }
+
+  /**
+  * Simple getter method for the user's image.
+  **/
+  public function getImg() {
+    return $this->img;
   }
 
   /**
