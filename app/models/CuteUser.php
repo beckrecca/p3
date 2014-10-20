@@ -5,25 +5,23 @@ Class CuteUser {
   private $name; // String of the user's name
   private $dob; // String of the user's date of birth
   private $loc; // String of the user's location
-  private $img; // String of the user's avatar image URI
 
   /** Methods **/
 
   /**
-  * Sets up the new user with a random name, DOB, location, and avatar image URI.
+  * Sets up the new user with a name, DOB, and location.
   **/
   public function setUser() {
-    $this->name = $this->randomName();
-    $this->dob = $this->randomDOB();
-    $this->loc = $this->RandomLocation();
-    $this->img = "/img/" . rand(1,24) . ".png";
+    $this->setName();
+    $this->setDOB();
+    $this->setLoc();
   }
   
   /**
-  * Sets the user's name manually.
+  * Sets the user's name.
   **/
-  public function setName($name) {
-    $this->name = $name;
+  public function setName() {
+    $this->name = $this->randomName();
   }
 
   /**
@@ -34,10 +32,10 @@ Class CuteUser {
   }
 
   /**
-  * Sets the user's date of birth manually.
+  * Sets the user's date of birth.
   **/
-  public function setDOB($month, $day, $year) {
-    $this->dob = $month . "/" . $day . "/" . $year;
+  public function setDOB() {
+    $this->dob = $this->randomDOB();
   }
 
   /**
@@ -48,10 +46,10 @@ Class CuteUser {
   }
 
   /**
-  * Sets the user's location manually.
+  * Sets the user's location.
   **/
-  public function setLoc($loc) {
-    $this->loc = $loc;
+  public function setLoc() {
+    $this->loc = $this->RandomLocation();
   }
 
   /**
@@ -59,20 +57,6 @@ Class CuteUser {
   **/
   public function getLoc() {
     return $this->loc;
-  }
-    
-  /**
-  * Sets the user's avatar image path manually.
-  **/
-  public function setImg($URI) {
-    $this->img = $URI;
-  }
-
-  /**
-  * Simple getter method for the user's image.
-  **/
-  public function getImg() {
-    return $this->img;
   }
 
   /**
@@ -140,19 +124,3 @@ Class CuteUser {
     return $locations[rand(0, count($locations)-1)];
   }
 }
-
-/** for testing
-for ($i = 0; $i <5; $i++) {
-
-$user = new CuteUser();
-$user->setUser();
-$user->setDOB(rand(3,4), rand(1,5), rand(1978,1981));
-$name = $user->getName();
-$dob = $user->getDOB();
-$loc = $user->getLoc();
-$img = $user->getImg();
-echo $name . "\r\n";
-echo $dob . "\r\n";
-echo $loc . "\r\n";
-echo $img . "\r\n\r\n";
-} **/
