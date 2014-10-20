@@ -13,22 +13,6 @@
 
 Route::get('/', function()
 {
-	/*
-	$cute = new CuteFiller();
-	$cute->setText(rand(1,10));
-	$filler = $cute->getText();
-
-	$users; // Array
-
-	for ($i = 0; $i < rand(2,12); $i++) {
-		$cuties[$i] = new CuteUser();
-		$cuties[$i]->setUser();
-		$users[$i]["name"] = $cuties[$i]->getName();
-		$users[$i]["dob"] = $cuties[$i]->getDOB();
-		$users[$i]["loc"] = $cuties[$i]->getLoc();
-	}
-	*/
-
 	return View::make('main');
 });
 
@@ -53,6 +37,7 @@ Route::post('/', function() {
 			$users[$i]["name"] = $cuties[$i]->getName();
 			$users[$i]["dob"] = $cuties[$i]->getDOB();
 			$users[$i]["loc"] = $cuties[$i]->getLoc();	
+			$users[$i]["img"] = $cuties[$i]->getImg();
 		}
 	}
 

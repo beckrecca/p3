@@ -44,7 +44,7 @@
 		@foreach ($users as $user)
 		<div class="panel panel-cute">
 			<div class="panel-heading">
-				<img src="/img/{{rand(1,20)}}.png" class="img-circle">
+				<img src="{{ $user["img"]}}" class="img-circle">
 			</div>
 			<div class="panel-body">
 				<span class="name">{{ $user["name"] }}</span> <br>
