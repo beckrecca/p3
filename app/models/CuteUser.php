@@ -90,8 +90,8 @@ Class CuteUser {
                         "Bridgewater, Massachusetts", "Los Angeles", "Prince Edward Island", 
                         "Valinor", "Minas Tirith", "The Shire", "New Hampshire", "Toronto",
                         "Stars Hollow, Connecticut", "The Gold Coast, Australia", "Broekel, Germany",
-                        "Prague", "Mongolia", "Pranceprancityprancepranceland", "Washington, D.C.",
-                        "Iverness, Scotland");
+                        "Prague", "Mongolia", "Carver, Massachusetts", "Washington, D.C.",
+                        "Iverness, Scotland", "The Land of Oz");
     return $locations[rand(0, count($locations)-1)];
   }
 }
