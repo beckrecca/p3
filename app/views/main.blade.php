@@ -29,7 +29,7 @@
 @if (isset($filler) || isset($users))
 <div class="row results">
 	@if (isset($filler))
-	<div class="col-xs-8 col-sm-5">
+	<div class="col-xs-12 col-sm-5">
 		<div class="visible-xs">
 			<h4>Filler Text</h4>
 		</div>
@@ -37,7 +37,7 @@
 	</div>
 	@endif
 	@if (isset($users))
-	<div class="col-xs-4 col-sm-3 col-md-2 col-sm-offset-2">
+	<div class="col-xs-5 col-xs-offset-2 col-sm-3 col-md-2 col-sm-offset-2">
 		<div class="visible-xs">
 			<h4>Users</h4>
 		</div>
