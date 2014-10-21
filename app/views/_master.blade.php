@@ -16,8 +16,8 @@
 <div class="container">
 <header class="row">
 	<h1>Cute Helper</h1>
+    <small>A silly tool for developers who are bored of Lorem Ipsum and John Smith.</small>
 </header>
 @yield('content')
-</div>
 </body>
 </html>
