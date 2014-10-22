@@ -74,7 +74,7 @@ Class CuteFiller {
   *
   * Note: a determiner phrase is a fancy linguistics term for a noun phrase.
   **/
-  public function cuteSentence() {
+  private function cuteSentence() {
 
     // the array of cute words we'll be working with
     $cutewords = array("DPs" => array 
@@ -87,25 +87,33 @@ Class CuteFiller {
                               "the tiniest mouse", "my mittens", "your favorite hat",
                               "all the rabbits", "sentient pancakes", "three goldfish", 
                               "some buried treasure", "your favorite snack", "free stuff",
-                              "the lazy egg yolk"),
+                              "the lazy egg yolk", "the puppy's floppy ears", "a kitty's pink nose",
+                              "my sister's new shoes", "the pirate's friendly talking parrot",
+                              "the baker", "the candlestick maker"),
                        "IV" => array 
                             ("jumps", "twitch", "yawns", "burp", "squeaked", "beep", "sit", "dreams", 
                               "thought", "hope", "play", "rolls", "danced", "twirled", "sings", 
-                              "stretches", "ran away", "dozes", "napped", "baked", "smell"),
+                              "stretches", "ran away", "dozes", "napped", "baked", "smell", "dream",
+                              "hoped", "laugh", "makes belief", "pretended", "create", "sighed",
+                              "squawks", "landed", "ponders", "ate", "listened"),
                        "TV" => array
                             ("liked", "hugs", "snuggles", "greet", "saw", "painted", "thank", "found", 
-                              "admires", "teach", "imitate", "befriended", "sniffs"),
+                              "admires", "teach", "imitate", "befriended", "sniffs", "pat", "knows",
+                              "smooched", "knew", "cradles", "join", "kiss", "surrounded",
+                              "illuminated", "treasured", "counts", "commend", "copied", 
+                              "comfort", "sits", "analyze"),
                        "adv" => array
                             ("quickly", "slowly", "cheerfully", "patiently", "dreamily", "jovially", 
                               "lazily", "smoothly", "wonderfully", "adorably", "creatively", 
                               "peacefully", "quietly", "swiftly", "often", "rarely", "sometimes",
-                              "never", "impossibly"),
+                              "never", "impossibly", "hopefully", "pensively", "exquisitely"),
                        "prep" => array
                             ("under the tree", "after breakfast", "with love", "in the garden", 
                               "on the way to school", "before bedtime", "on top of the spaghetti", 
                               "down the hill", "up the mountain", "in a cozy nest", 
                               "inside the cottage", "into the river", "through the brilliant sky",
-                              "on Halloween", "along the road", "above the roses")
+                              "on Halloween", "along the road", "above the roses",
+                              "on your neighbor's shoulder", "in the tub")
                        );
 
     // Initialize our silly sentence!

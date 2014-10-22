@@ -103,7 +103,7 @@ Class CuteUser {
   private function randomDOB() {
     $month = rand(1,12);
     $year = rand(1900,2000);
-    $day = $this->randomDayOfTheMonth($month, $year);
+    $day = $this->randomDayOfTheMonth($month);
 
     return $month . "/" . $day . "/" . $year;
 

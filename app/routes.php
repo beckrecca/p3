@@ -21,7 +21,7 @@ Route::post('/', function() {
 	$p = Input::get('p'); // number of paragraphs of filler text to generate
 	$u = Input::get('u'); // number of users to create
 
-	$filler = ""; // our string of filler text
+	$filler = null; // our string of filler text
 	$users = null; // our array of users
 
 	if ($p > 0) {
