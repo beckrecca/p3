@@ -19,6 +19,14 @@
 		    @for ($i = 0; $i <= 10;  $i++)
 				<input type="radio" value="{{$i}}" name="u"> {{ $i }}
 			@endfor
+			<br>
+			{{ Form::label('img', 'Include avatar image? ')}}
+			{{ Form::checkbox('img', '1', true) }} <br>
+			{{ Form::label('dob', 'Include date of birth? ')}}
+			{{ Form::checkbox('dob', '1', true) }} <br>
+			{{ Form::label('loc', 'Include location? ')}}
+			{{ Form::checkbox('loc', '1', true) }}
+			
 		</div>
 		<div class="row submit">
 			{{ Form::submit('Submit', array('class' => 'btn btn-cute')); }}
@@ -43,13 +51,19 @@
 		</div>
 		@foreach ($users as $user)
 		<div class="panel panel-cute">
+			@if ($img)
 			<div class="panel-heading">
 				<img src="{{ $user["img"]}}" class="img-circle">
 			</div>
+			@endif
 			<div class="panel-body">
 				<span class="name">{{ $user["name"] }}</span> <br>
+				@if ($dob)
 				{{ $user["dob"] }} <br>
+				@endif
+				@if ($loc)
 				{{ $user["loc"]}}
+				@endif
 			</div>
 		</div>
 		@endforeach

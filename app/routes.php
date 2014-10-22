@@ -24,6 +24,10 @@ Route::post('/', function() {
 	$filler = null; // our string of filler text
 	$users = null; // our array of users
 
+	$img = Input::get('img'); 
+	$dob = Input::get('dob'); 
+	$loc = Input::get('loc'); 
+
 	if ($p > 0) {
 		$newfiller = new CuteFiller();
 		$newfiller->setText($p);
@@ -32,16 +36,27 @@ Route::post('/', function() {
 	
 	if ($u > 0) {
 		for ($i = 0; $i < $u; $i++) {
-			$cuties[$i] = new CuteUser();
+			$cuties[$i] = new CuteUser(); // initialize and set new user
 			$cuties[$i]->setUser();
-			$users[$i]["name"] = $cuties[$i]->getName();
-			$users[$i]["dob"] = $cuties[$i]->getDOB();
-			$users[$i]["loc"] = $cuties[$i]->getLoc();	
-			$users[$i]["img"] = $cuties[$i]->getImg();
+
+			// include an image or not
+			if ($img) $users[$i]["img"] = $cuties[$i]->getImg();
+
+			$users[$i]["name"] = $cuties[$i]->getName(); 
+
+			// include DOB or not
+			if ($dob) $users[$i]["dob"] = $cuties[$i]->getDOB();
+
+			// include loc or not
+			if ($loc) $users[$i]["loc"] = $cuties[$i]->getLoc();	
+
 		}
 	}
 
 	return View::make('main')
 		 ->with('filler', $filler)
-		 ->with('users', $users);
+		 ->with('users', $users)
+		 ->with('img', $img)
+		 ->with('dob', $dob)
+		 ->with('loc', $loc);
 });
