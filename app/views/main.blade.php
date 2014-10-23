@@ -9,7 +9,7 @@
 			{{ Form::label('p', 'Select how many paragraphs of filler text you need. ')}}
 			<br>
 			@for ($i = 0; $i <= 10;  $i++)
-				<input type="radio" value="{{$i}}" name="p"> {{ $i }}
+				<input type="radio" value="{{$i}}" name="p" id="p"> {{ $i }}
 			@endfor
 		</div>
 		<div class="col-sm-6">
@@ -17,7 +17,7 @@
 		    {{ Form::label('u', 'Select how many users you would like to generate. ') }}
 		    <br>
 		    @for ($i = 0; $i <= 10;  $i++)
-				<input type="radio" value="{{$i}}" name="u"> {{ $i }}
+				<input type="radio" value="{{$i}}" name="u" id="u"> {{ $i }}
 			@endfor
 			<br>
 			{{ Form::label('img', 'Include avatar image? ')}}
@@ -45,7 +45,7 @@
 	</div>
 	@endif
 	@if (isset($users))
-	<div class="col-xs-5 col-xs-offset-2 col-sm-3 col-md-2 col-sm-offset-2">
+	<div class="col-xs-6 col-xs-offset-2 col-sm-3 col-md-2 col-sm-offset-2">
 		<div class="visible-xs">
 			<h4>Users</h4>
 		</div>
